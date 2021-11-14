@@ -5,19 +5,31 @@
 
 body {
     margin: 0px;
-    background-color:rgb(226, 194, 124);
+    background-color:rgb(217 190 132);
 }
 
 .header {
-    padding: 40px 20px;
     text-align: center;
     background-color: moccasin;
+    padding-top: 50px;
 }
 
-.main, nav {
+.main {
     padding: 16px;
     max-width: 800px;
     margin: 0 auto;
+}
+
+article {
+    border-top: 2px dotted red;
+}
+
+nav {
+    text-align: center;
+    word-spacing: 15px;
+    margin: 10px auto;
+    background-color: rgb(119, 98, 4);
+    border-width: 50%;
 }
 
 
@@ -25,15 +37,14 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Verdena', sans-serif;
 }
 
-.sNavigation {
-    text-decoration: underline;
-    font-weight: bold;
-    color:rgb(255, 255, 255);
-}
 
 .to-top {
     font-size: 75%;
     color: rgb(255, 255, 255);
+}
+
+a:link {
+    color:rgb(255, 56, 165);
 }
 
 a:visited {
@@ -42,4 +53,8 @@ a:visited {
 
 a:hover {
     color: rgb(230, 143, 29);
+}
+
+a:active {
+    color: rgb(233, 44, 10);
 }
