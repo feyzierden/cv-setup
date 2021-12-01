@@ -1,146 +1,140 @@
-*{
+/* GENERAL STYLING */
+* {
     box-sizing: border-box;
-}
-
-html {
-    font-family: 'Arial', 'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
-    font-size: 20px;
-}
-
-@media screen and (min-width: 786px) {
-    html {
-      font-size: 18px;
-    }
- }
+  }
   
-@media screen and (min-width: 992px) {
-    html {
-      font-size: 20px;
-    }
- }
-
-body {
+  html {
+    font-family: "Arial", "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+    font-size: 20px;
+  }
+  
+  body {
     margin: 0px;
-    background-color:rgb(217 190 132);
-}
-
-nav {
+    background-color: rgb(217 190 132);
+  }
+  
+  nav {
     text-align: center;
     word-spacing: 1rem;
-    margin: .5rem auto;
+    margin: 0.5rem auto;
     background-color: rgb(197, 157, 69);
     border-width: 50%;
     display: flex;
     flex-direction: column;
     border: 1px solid rgb(255, 136, 24);
-}
-
-@media screen 
-    and (min-width: 768px) {
-        nav {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-        }
   }
-
-
-article {
+  
+  article {
     font-size: 0.8rem;
-}
-
-
-article + article {
-    border-top: .2rem dotted rgb(255, 136, 24);
-}
-
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Verdena', sans-serif;
+  }
+  
+  article + article {
+    border-top: 0.2rem dotted rgb(255, 136, 24);
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Verdena", sans-serif;
     /*display: inline;*/
-}
-
-.header {
+  }
+  
+  .header {
     text-align: center;
     background-color: moccasin;
     padding-top: 2.5rem;
     position: relative;
-}
-
-.main {
+  }
+  
+  .main {
     padding: 0.8rem;
     max-width: 40rem;
     margin: 0 auto;
     max-width: 70ch;
-}
-
-@media screen 
-    and (min-width: 992px) {
-        .main > * + * {
-            margin-top: 4rem;
-        }
   }
-
-.title {
+  
+  .title {
     font-size: 3em;
-}
-
-.profession {
+  }
+  
+  .profession {
     font-size: 0.9em;
-}
-
-.profession::after {
-    content: ' 👔';
-}
-
-
-.to-top {
+  }
+  
+  .profession::after {
+    content: " 👔";
+  }
+  
+  .to-top {
     font-size: 75%;
     color: rgb(255, 255, 255);
-}
-
-.hire-me {
+  }
+  
+  .hire-me {
     background-color: rgb(255, 136, 24);
     position: absolute;
     right: 1rem;
     top: 1rem;
-    padding: .5rem;
-}
-
-@media screen 
-    and (min-width: 992px) {
-        .hire-me {
-            position: fixed;
-        }
+    padding: 0.5rem;
   }
   
-@media print {
-    .hire-me {
-        display: none;
-    }
-
-    #navigation {
-        display: none;
-    }
-}
-
-a:link {
-    color:rgb(255, 56, 165);
-}
-
-a:visited {
-    color:rgb(255, 255, 255);
-}
-
-a:hover {
+  a:link {
+    color: rgb(255, 56, 165);
+  }
+  
+  a:visited {
+    color: rgb(255, 255, 255);
+  }
+  
+  a:hover {
     color: rgb(228, 173, 102);
-}
-
-a:active {
+  }
+  
+  a:active {
     color: rgb(233, 44, 10);
-}
-
-::selection{
+  }
+  
+  ::selection {
     background-color: white;
-    color:grey;
-}
+    color: grey;
+  }
+  
+  /* SMALL DEVICES */
+  @media screen and (min-width: 768px) {
+    html {
+      font-size: 18px;
+    }
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
+  
+  /* MEDIUM DEVICES */
+  @media screen and (min-width: 992px) {
+    html {
+      font-size: 20px;
+    }
+    .main > * + * {
+      margin-top: 4rem;
+    }
+    .hire-me {
+      position: fixed;
+    }
+  }
+  
+  /* PRINTER OUTPUT */
+  @media print {
+    .hire-me {
+      display: none;
+    }
+  
+    #navigation {
+      display: none;
+    }
+  }
+  
