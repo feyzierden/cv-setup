@@ -9,20 +9,36 @@
   }
   
   body {
+    /* custom-properties (variables for colors): used by 'var(--variablename)'*/
+    --body-background: rgb(217 190 132);
+    --header-footer-gradient1: grey;
+    --header-footer-gradient2: lightblue;
+    --nav-background: rgb(197, 157, 69);
+    --hire-me-background: rgb(255, 136, 24);
+    --a-link: rgb(255, 56, 165);
+    --a-visited: rgb(255, 255, 255);
+    --a-hover: rgb(228, 173, 102);
+    --a-active: rgb(233, 44, 10);
+    --to-top-links: rgb(255, 255, 255);
+    --border-top-bottom: rgb(255, 136, 24);
+    --selection-background: white;
+    --selection-text: grey;
+
+
     margin: 0px;
-    background-color: rgb(217 190 132);
+    background-color: var(--body-background);
   }
   
   nav {
     text-align: center;
     word-spacing: 1rem;
     margin: 0.5rem auto;
-    background-color: rgb(197, 157, 69);
+    background-color: var(--nav-background);
     border-width: 50%;
     display: flex;
     flex-direction: column;
-    border-top: 1px solid rgb(255, 136, 24);
-    border-bottom: 1px solid rgb(255, 136, 24);
+    border-top: 1px solid var(--border-top-bottom);
+    border-bottom: 1px solid var(--border-top-bottom);;
   }
   
   article {
@@ -30,7 +46,7 @@
   }
   
   article + article {
-    border-top: 0.2rem dotted rgb(255, 136, 24);
+    border-top: 0.2rem dotted var(--border-top-bottom);;
   }
   
   h1,
@@ -40,24 +56,30 @@
   h5,
   h6 {
     font-family: "Verdena", sans-serif;
-    /*display: inline;*/
   }
   
   header {
     text-align: center;
-    background-color: moccasin;
     padding-top: 2.5rem;
     position: relative;
-    background-image: linear-gradient(45deg, grey 20%, lightblue 80%);
+    background-image: linear-gradient(
+      45deg, 
+      var(--header-footer-gradient1) 20%, 
+      var(--header-footer-gradient2) 80%
+    );
   }
 
   footer {
     text-align: center;
     margin-top: 100px;
     margin-bottom: 30px;
-    border-top: 0.2rem solid rgb(255, 136, 24);
-    border-bottom: 0.2rem solid rgb(255, 136, 24);
-    background-image: linear-gradient(45deg, lightblue 20%, grey 80%);
+    border-top: 0.2rem solid var(--border-top-bottom);
+    border-bottom: 0.2rem solid var(--border-top-bottom);
+    background-image: linear-gradient(
+      45deg, 
+      var(--header-footer-gradient2) 20%, 
+      var(--header-footer-gradient1) 80%
+    );
   }
 
   .title {
@@ -86,11 +108,11 @@
   
   .to-top {
     font-size: 75%;
-    color: rgb(255, 255, 255);
+    color: var(--to-top-links);
   }
   
   .hire-me {
-    background-color: rgb(255, 136, 24);
+    background-color: var(--hire-me-background);
     position: absolute;
     right: 1rem;
     top: 1rem;
@@ -98,24 +120,25 @@
   }
   
   a:link {
-    color: rgb(255, 56, 165);
+    color: var(--a-link);
   }
   
   a:visited {
-    color: rgb(255, 255, 255);
+    color: var(--a-visited);
   }
   
   a:hover {
-    color: rgb(228, 173, 102);
+    color: var(--a-hover);
   }
   
   a:active {
-    color: rgb(233, 44, 10);
+    color: var(--a-active);
   }
   
+  /* stylt das gesamte dokument, wenn der Inhalt markiert wird */
   ::selection {
-    background-color: white;
-    color: grey;
+    background-color: var(--selection-background);
+    color: var(--selection-text);
   }
   
   /* SMALL DEVICES */
