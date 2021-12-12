@@ -6,9 +6,7 @@
   html {
     font-family: "Arial", "Franklin Gothic Medium", "Arial Narrow", sans-serif;
     font-size: 20px;
-  }
-  
-  body {
+
     /* custom-properties (variables for colors): used by 'var(--variablename)'*/
     --body-background: rgb(217 190 132);
     --header-footer-gradient1: grey;
@@ -23,8 +21,9 @@
     --border-top-bottom: rgb(255, 136, 24);
     --selection-background: white;
     --selection-text: grey;
-
-
+  }
+  
+  body {
     margin: 0px;
     background-color: var(--body-background);
   }
@@ -119,6 +118,10 @@
     padding: 0.5rem;
   }
   
+a { 
+  transition: .3s ease-in-out;
+}
+
   a:link {
     color: var(--a-link);
   }
@@ -133,6 +136,13 @@
   
   a:active {
     color: var(--a-active);
+  }
+
+  a:focus {
+    transition: .2s ease-in-out;
+    background-color: grey;
+    outline-color: white;
+    outline-style: solid;
   }
   
   /* stylt das gesamte dokument, wenn der Inhalt markiert wird */
