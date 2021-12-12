@@ -68,6 +68,15 @@
     );
   }
 
+  header:hover .hire-me {
+    transform: scale(1.25) rotate(-10deg) translate(-5px, 5px);
+    background-image: linear-gradient(
+      45deg, 
+      grey 20%, 
+      silver 80%
+    );
+  }
+
   footer {
     text-align: center;
     margin-top: 100px;
@@ -113,9 +122,10 @@
   .hire-me {
     background-color: var(--hire-me-background);
     position: absolute;
-    right: 1rem;
+    right: 2rem;
     top: 1rem;
     padding: 0.5rem;
+    transition: .5s ease;
   }
   
 a { 
