@@ -21,7 +21,8 @@
     border-width: 50%;
     display: flex;
     flex-direction: column;
-    border: 1px solid rgb(255, 136, 24);
+    border-top: 1px solid rgb(255, 136, 24);
+    border-bottom: 1px solid rgb(255, 136, 24);
   }
   
   article {
@@ -42,11 +43,25 @@
     /*display: inline;*/
   }
   
-  .header {
+  header {
     text-align: center;
     background-color: moccasin;
     padding-top: 2.5rem;
     position: relative;
+    background-image: linear-gradient(45deg, grey 20%, lightblue 80%);
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    border-top: 0.2rem solid rgb(255, 136, 24);
+    border-bottom: 0.2rem solid rgb(255, 136, 24);
+    background-image: linear-gradient(45deg, lightblue 20%, grey 80%);
+  }
+
+  .title {
+    font-size: 3em;
   }
   
   .main {
@@ -55,11 +70,12 @@
     margin: 0 auto;
     max-width: 70ch;
   }
-  
-  .title {
-    font-size: 3em;
+
+  .footer {
+    margin-top: 3px;
+    margin-bottom: 3px;
   }
-  
+
   .profession {
     font-size: 0.9em;
   }
