@@ -1,201 +1,214 @@
 /* GENERAL STYLING */
 * {
-    box-sizing: border-box;
-  }
-  
-  html {
-    font-family: "Arial", "Franklin Gothic Medium", "Arial Narrow", sans-serif;
-    font-size: 20px;
-
-    /* custom-properties (variables for colors): used by 'var(--variablename)'*/
-    --body-background: rgb(217 190 132);
-    --header-footer-gradient1: grey;
-    --header-footer-gradient2: lightblue;
-    --nav-background: rgb(197, 157, 69);
-    --hire-me-background: rgb(255, 136, 24);
-    --a-link: rgb(255, 56, 165);
-    --a-visited: rgb(255, 255, 255);
-    --a-hover: rgb(228, 173, 102);
-    --a-active: rgb(233, 44, 10);
-    --to-top-links: rgb(255, 255, 255);
-    --border-top-bottom: rgb(255, 136, 24);
-    --selection-background: white;
-    --selection-text: grey;
-  }
-  
-  body {
-    margin: 0px;
-    background-color: var(--body-background);
-  }
-  
-
-  /* SPECIFIC STYLING */
-  nav {
-    text-align: center;
-    word-spacing: 1rem;
-    margin: 0.5rem auto;
-    background-color: var(--nav-background);
-    border-width: 50%;
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid var(--border-top-bottom);
-    border-bottom: 1px solid var(--border-top-bottom);;
-  }
-  
-  article {
-    font-size: 0.8rem;
-  }
-  
-  article + article {
-    border-top: 0.2rem dotted var(--border-top-bottom);;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Verdena", sans-serif;
-  }
-  
-  header {
-    text-align: center;
-    padding-top: 2.5rem;
-    position: relative;
-    background-image: linear-gradient(
-      45deg, 
-      var(--header-footer-gradient1) 20%, 
-      var(--header-footer-gradient2) 80%
-    );
-  }
-
-  header:hover .hire-me {
-    transform: scale(1.25) rotate(-10deg) translate(-5px, 5px);
-    background-image: linear-gradient(
-      45deg, 
-      grey 20%, 
-      silver 80%
-    );
-  }
-
-  footer {
-    text-align: center;
-    margin-top: 100px;
-    margin-bottom: 30px;
-    border-top: 0.2rem solid var(--border-top-bottom);
-    border-bottom: 0.2rem solid var(--border-top-bottom);
-    background-image: linear-gradient(
-      45deg, 
-      var(--header-footer-gradient2) 20%, 
-      var(--header-footer-gradient1) 80%
-    );
-  }
-
-  .title {
-    font-size: 3em;
-  }
-  
-  .main {
-    padding: 0.8rem;
-    max-width: 40rem;
-    margin: 0 auto;
-    max-width: 70ch;
-  }
-
-  .footer {
-    margin-top: 3px;
-    margin-bottom: 3px;
-  }
-
-  .profession {
-    font-size: 0.9em;
-  }
-  
-  .profession::after {
-    content: " 👔";
-  }
-  
-  .to-top {
-    font-size: 75%;
-    color: var(--to-top-links);
-  }
-  
-  .hire-me {
-    background-color: var(--hire-me-background);
-    position: absolute;
-    right: 2rem;
-    top: 1rem;
-    padding: 0.5rem;
-    transition: .5s ease;
-  }
-  
-a { 
-  transition: .3s ease-in-out;
+  box-sizing: border-box;
 }
 
-  a:link {
-    color: var(--a-link);
-  }
-  
-  a:visited {
-    color: var(--a-visited);
-  }
-  
-  a:hover {
-    color: var(--a-hover);
-  }
-  
-  a:active {
-    color: var(--a-active);
+html {
+  font-family: "Arial", "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+  font-size: 20px;
+
+  /* custom-properties (variables for colors): used by 'var(--variablename)'*/
+  --body-background: rgb(217 190 132);
+  --header-footer-gradient1: grey;
+  --header-footer-gradient2: lightblue;
+  --nav-background: rgb(197, 157, 69);
+  --hire-me-background: rgb(255, 136, 24);
+  --a-link: rgb(255, 56, 165);
+  --a-visited: rgb(255, 255, 255);
+  --a-hover: rgb(228, 173, 102);
+  --a-active: rgb(233, 44, 10);
+  --to-top-links: rgb(255, 255, 255);
+  --border-top-bottom: rgb(255, 136, 24);
+  --selection-background: white;
+  --selection-text: grey;
+}
+
+body {
+  margin: 0px;
+  background-color: var(--body-background);
+}
+
+/* SPECIFIC STYLING */
+nav {
+  word-spacing: 1rem;
+  margin: 0.5rem auto;
+  background-color: var(--nav-background);
+  border-width: 50%;
+  border-top: 1px solid var(--border-top-bottom);
+  border-bottom: 1px solid var(--border-top-bottom);
+}
+
+nav > div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  font-size: 0.8rem;
+}
+
+article + article {
+  border-top: 0.2rem dotted var(--border-top-bottom);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Verdena", sans-serif;
+}
+
+header {
+  text-align: center;
+  padding-top: 2.5rem;
+  position: relative;
+  background-image: linear-gradient(
+    45deg,
+    var(--header-footer-gradient1) 20%,
+    var(--header-footer-gradient2) 80%
+  );
+}
+
+header:hover .hire-me {
+  transform: scale(1.25) rotate(-10deg) translate(-5px, 5px);
+  background-image: linear-gradient(45deg, grey 20%, silver 80%);
+}
+
+footer {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  border-top: 0.2rem solid var(--border-top-bottom);
+  border-bottom: 0.2rem solid var(--border-top-bottom);
+  background-image: linear-gradient(
+    45deg,
+    var(--header-footer-gradient2) 20%,
+    var(--header-footer-gradient1) 80%
+  );
+}
+
+.title {
+  font-size: 3em;
+}
+
+.main {
+  padding: 0.8rem;
+  max-width: 40rem;
+  margin: 0 auto;
+  max-width: 70ch;
+}
+
+.footer {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.profession {
+  font-size: 0.9em;
+  margin-top: -30px;
+  margin-bottom: 50px;
+}
+
+.profession::after {
+  content: " 👔";
+}
+
+.to-top {
+  font-size: 75%;
+  color: var(--to-top-links);
+}
+
+.hire-me {
+  background-color: var(--hire-me-background);
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+  padding: 0.5rem;
+  transition: 0.5s ease;
+}
+
+a {
+  transition: 0.3s ease-in-out;
+}
+
+a:link {
+  color: var(--a-link);
+}
+
+a:visited {
+  color: var(--a-visited);
+}
+
+a:hover {
+  color: var(--a-hover);
+}
+
+a:active {
+  color: var(--a-active);
+}
+
+a:focus {
+  transition: 0.2s ease-in-out;
+  background-color: grey;
+  outline-color: white;
+  outline-style: solid;
+}
+
+/* stylt das gesamte dokument, wenn der Inhalt markiert wird */
+::selection {
+  background-color: var(--selection-background);
+  color: var(--selection-text);
+}
+
+/* SMALL DEVICES */
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
   }
 
-  a:focus {
-    transition: .2s ease-in-out;
-    background-color: grey;
-    outline-color: white;
-    outline-style: solid;
+  nav > div {
+    max-width: 70ch;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 0.8rem;
   }
-  
-  /* stylt das gesamte dokument, wenn der Inhalt markiert wird */
-  ::selection {
-    background-color: var(--selection-background);
-    color: var(--selection-text);
+
+  .main-article {
+    display: grid;
+    grid-template-columns: 1.8fr 2fr;
+    justify-content: space-evenly;
   }
-  
-  /* SMALL DEVICES */
-  @media screen and (min-width: 768px) {
-    html {
-      font-size: 18px;
-    }
-    nav {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-    }
+
+  .main-article-content {
+    margin-top: 4rem;
   }
-  
-  /* MEDIUM DEVICES */
-  @media screen and (min-width: 992px) {
-    html {
-      font-size: 20px;
-    }
-    .main > * + * {
-      margin-top: 4rem;
-    }
-    .hire-me {
-      position: fixed;
-    }
+}
+
+/* MEDIUM DEVICES */
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
   }
-  
-  /* PRINTER OUTPUT */
-  @media print {
-    .hire-me {
-      display: none;
-    }
-  
-    #navigation {
-      display: none;
-    }
+  .main > * + * {
+    margin-top: 4rem;
   }
-  
+  .hire-me {
+    position: fixed;
+  }
+}
+
+/* PRINTER OUTPUT */
+@media print {
+  .hire-me {
+    display: none;
+  }
+
+  #navigation {
+    display: none;
+  }
+}
